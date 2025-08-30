@@ -1,0 +1,116 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonical?: string;
+}
+
+const {
+  title = 'KV Servicios TI - Soluciones Profesionales en Tecnología de Información',
+  description = 'Ofrecemos servicios y asesoría especializada en tecnología de información para empresas. Soluciones digitales innovadoras para impulsar tu negocio.',
+  image = '/og-image.jpg',
+  canonical = Astro.url.href,
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonical} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.url)} />
+    <meta property="og:site_name" content="KV Servicios TI" />
+    <meta property="og:locale" content="es_MX" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonical} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.url)} />
+    
+    <!-- Additional Meta Tags -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="KV Servicios TI" />
+    <meta name="keywords" content="tecnología de información, servicios TI, asesoría tecnológica, desarrollo web, consultoría IT, México" />
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="msapplication-TileColor" content="#2563eb" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+         <!-- Structured Data -->
+     <script type="application/ld+json">
+       {
+         "@context": "https://schema.org",
+         "@type": "Organization",
+         "name": "KV Servicios TI",
+         "description": "Soluciones profesionales en tecnología de información",
+         "url": "https://kvserviciosti.com",
+         "logo": "https://kvserviciosti.com/logo.png",
+                   "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "email": "luhr5kar@gmail.com"
+          },
+         "sameAs": [
+           "https://www.facebook.com/share/1BqXG8ZvcC/"
+         ]
+       }
+     </script>
+
+           <!-- Theme initialization script - must be in head to prevent flash -->
+      <script is:inline>
+        // Initialize theme immediately to prevent flash
+        (function() {
+          const savedTheme = localStorage.getItem('color-theme');
+          const html = document.documentElement;
+          
+          if (savedTheme === 'dark') {
+            html.classList.add('dark');
+          } else if (savedTheme === 'light') {
+            html.classList.remove('dark');
+          } else {
+            // Check system preference
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (prefersDark) {
+              html.classList.add('dark');
+            }
+          }
+        })();
+      </script>
+   </head>
+  <body class="min-h-screen flex flex-col">
+    <Header />
+    
+    <main class="flex-grow pt-16">
+      <slot />
+    </main>
+    
+    <Footer />
+  </body>
+</html>

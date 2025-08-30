@@ -1,43 +1,104 @@
-# Astro Starter Kit: Minimal
+# KV Servicios TI - Sitio Web Profesional
 
-```sh
-npm create astro@latest -- --template minimal
+Sitio web profesional para **KV Servicios TI**, una empresa de servicios y asesoría en tecnología de información.
+
+## 🚀 Características
+
+- **Diseño Moderno y Futurista**: Interfaz elegante con tono digital y profesional
+- **Modo Claro/Oscuro**: Toggle funcional con persistencia en localStorage
+- **Diseño Responsivo**: Optimizado para todos los dispositivos
+- **SEO Optimizado**: Metadatos completos y estructura semántica
+- **Accesibilidad**: Cumple con estándares de accesibilidad web
+
+## 🛠️ Tecnologías Utilizadas
+
+- **Astro**: Framework web moderno para sitios estáticos
+- **Tailwind CSS**: Framework CSS utility-first
+- **TypeScript**: Tipado estático opcional
+- **SVG**: Logos y íconos vectoriales escalables
+
+## 📁 Estructura del Proyecto
+
+```
+src/
+├── components/          # Componentes reutilizables
+│   ├── Header.astro    # Navegación principal
+│   ├── Footer.astro    # Pie de página
+│   └── ThemeToggle.astro # Toggle tema claro/oscuro
+├── layouts/            # Layouts de página
+│   └── BaseLayout.astro # Layout principal
+├── pages/              # Páginas del sitio
+│   └── index.astro     # Página de inicio
+└── styles/             # Estilos globales
+    └── global.css      # CSS principal con Tailwind
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🎨 Componentes Principales
 
-## 🚀 Project Structure
+### Header
+- Logo personalizado de KV Servicios TI
+- Navegación responsiva
+- Toggle de tema claro/oscuro
+- Menú móvil funcional
 
-Inside of your Astro project, you'll see the following folders and files:
+### Footer
+- Información de contacto (Telegram y Email)
+- Enlaces rápidos
+- Redes sociales (Facebook)
+- Copyright dinámico
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+### Página de Inicio
+- Sección Hero con llamada a la acción
+- Servicios ofrecidos (6 categorías)
+- Sección "Por qué elegirnos"
+- Estadísticas de la empresa
+- CTA final con contacto directo
+
+## 🚀 Instalación y Desarrollo
+
+### Prerrequisitos
+- Node.js (versión 18 o superior)
+- npm o pnpm
+
+### Instalación
+```bash
+# Clonar el repositorio
+git clone [URL_DEL_REPOSITORIO]
+cd KV
+
+# Instalar dependencias
+npm install
+
+# Iniciar servidor de desarrollo
+npm run dev
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Scripts Disponibles
+```bash
+npm run dev      # Servidor de desarrollo
+npm run build    # Construir para producción
+npm run preview  # Vista previa de producción
+```
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 📱 Información de Contacto
 
-Any static assets, like images, can be placed in the `public/` directory.
+- **Telegram**: @Agente KV Servicios IT
+- **Email**: luhr5kar@gmail.com
+- **Facebook**: [KV Servicios TI](https://www.facebook.com/share/1BqXG8ZvcC/)
 
-## 🧞 Commands
+## 🎯 Servicios Ofrecidos
 
-All commands are run from the root of the project, from a terminal:
+1. **Consultoría IT**: Evaluación y optimización de infraestructura tecnológica
+2. **Desarrollo Web**: Sitios web modernos y responsivos
+3. **Optimización de Sistemas**: Mejora de rendimiento y eficiencia
+4. **Ciberseguridad**: Protección y auditorías de seguridad
+5. **Soporte Técnico**: Asistencia especializada 24/7
+6. **Migración a la Nube**: Transición y optimización cloud
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 📄 Licencia
 
-## 👀 Want to learn more?
+Este proyecto es propiedad de KV Servicios TI. Todos los derechos reservados.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+
+**Desarrollado con ❤️ para KV Servicios TI**
